@@ -3,13 +3,14 @@ package com.udemy.section6.challenge;
 import com.udemy.section6.challenge.abstractFactory.DuckFactory;
 import com.udemy.section6.challenge.abstractFactory.TigerFactory;
 import com.udemy.section6.challenge.concreteFactory.AnimalFactory;
+import com.udemy.section6.challenge.concreteFactory.AnimalFactoryInterface;
 import com.udemy.section6.challenge.staticFactory.StaticAnimalFactory;
 
 public class Client {
 
     public static void main(String[] args) {
 
-        AnimalFactory animalFactory = new AnimalFactory();
+        AnimalFactoryInterface animalFactory = new AnimalFactory();
 
         Animal duck = animalFactory.getAnimalType("duck");
         Animal tiger = animalFactory.getAnimalType("tiger");
