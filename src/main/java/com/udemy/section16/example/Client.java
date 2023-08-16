@@ -14,8 +14,9 @@ public class Client {
         PopcornPopper popper = new PopcornPopper("Popcorn Popper");
 
         HomeTheaterFacade homeTheater = new HomeTheaterFacade(amp, tuner, dvd, cd,
-                                                                projector, screen, lights, popper);
+                                                                projector,  lights, screen, popper);
         homeTheater.watchMovie("Inception");
+        System.out.println("Movie playing");
         homeTheater.endMovie();
     }
 }
