@@ -2,25 +2,21 @@ package com.udemy.section16.challenge;
 
 public class HotelKeeper {
 
-    private NonVegRestaurant nonVegRestaurant;
-    private VegRestaurant vegRestaurant;
-    private VegNonBothRestaurant vegNonBothRestaurant;
-
     public HotelKeeper() {
-        this.nonVegRestaurant = new NonVegRestaurant();
-        this.vegRestaurant = new VegRestaurant();
-        this.vegNonBothRestaurant = new VegNonBothRestaurant();
     }
 
     public void getBothMenu(){
+        VegNonBothRestaurant vegNonBothRestaurant= new VegNonBothRestaurant();
         vegNonBothRestaurant.getMenus().showMenu();
     }
 
     public void getNonVegMenu(){
+        NonVegRestaurant nonVegRestaurant= new NonVegRestaurant();
         nonVegRestaurant.getMenus().showMenu();
     }
 
     public void getVegMenu(){
+        VegRestaurant vegRestaurant= new VegRestaurant();
         vegRestaurant.getMenus().showMenu();
     }
 
