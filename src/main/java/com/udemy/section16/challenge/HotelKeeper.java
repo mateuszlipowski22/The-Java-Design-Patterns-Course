@@ -5,19 +5,22 @@ public class HotelKeeper {
     public HotelKeeper() {
     }
 
-    public void getBothMenu(){
+    public Both getBothMenu(){
         VegNonBothRestaurant vegNonBothRestaurant= new VegNonBothRestaurant();
-        vegNonBothRestaurant.getMenus().showMenu();
+        Both both = (Both) vegNonBothRestaurant.getMenus();
+        return both;
     }
 
-    public void getNonVegMenu(){
+    public NonVegMenu getNonVegMenu(){
         NonVegRestaurant nonVegRestaurant= new NonVegRestaurant();
-        nonVegRestaurant.getMenus().showMenu();
+        NonVegMenu nonVegMenu = (NonVegMenu) nonVegRestaurant.getMenus();
+        return nonVegMenu;
     }
 
-    public void getVegMenu(){
+    public VegMenu getVegMenu(){
         VegRestaurant vegRestaurant= new VegRestaurant();
-        vegRestaurant.getMenus().showMenu();
+        VegMenu vegMenu = (VegMenu) vegRestaurant.getMenus();
+        return vegMenu;
     }
 
 }

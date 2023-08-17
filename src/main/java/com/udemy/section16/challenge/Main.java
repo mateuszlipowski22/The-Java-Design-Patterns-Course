@@ -7,9 +7,14 @@ public class Main {
         HotelKeeper hotelKeeper = new HotelKeeper();
         System.out.println();
 
-        hotelKeeper.getBothMenu();
-        hotelKeeper.getVegMenu();
-        hotelKeeper.getNonVegMenu();
+        Both both = hotelKeeper.getBothMenu();
+        VegMenu vegMenu = hotelKeeper.getVegMenu();
+        NonVegMenu nonVegMenu = hotelKeeper.getNonVegMenu();
+        System.out.println();
+
+        both.showMenu();
+        vegMenu.showMenu();
+        nonVegMenu.showMenu();
 
     }
 
