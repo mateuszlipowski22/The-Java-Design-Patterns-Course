@@ -6,9 +6,13 @@ public class Client {
 
         Internet proxyInternet = new ProxyInternet();
 
-        proxyInternet.connect("interia.pl");
-        System.out.println("----------");
-        proxyInternet.connect("wp.pl");
+        try{
+            proxyInternet.connect("interia.pl");
+            System.out.println("----------");
+            proxyInternet.connect("wp.pl");
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
 
     }
 

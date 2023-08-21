@@ -20,9 +20,9 @@ public class ProxyInternet implements Internet{
     }
 
     @Override
-    public void connect(String website) {
+    public void connect(String website) throws Exception {
         if(bannedList.contains(website)){
-            System.out.println("Access denied");
+            throw new Exception("Access denied");
         }else{
             realInternet.connect(website);
         }
